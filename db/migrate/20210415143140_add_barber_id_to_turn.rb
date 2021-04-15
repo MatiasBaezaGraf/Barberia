@@ -1,0 +1,5 @@
+class AddBarberIdToTurn < ActiveRecord::Migration[6.1]
+  def change
+    add_reference :turns, :barber, null: false, foreign_key: true
+  end
+end
